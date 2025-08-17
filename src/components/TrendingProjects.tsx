@@ -86,11 +86,25 @@ const projects: Project[] = [
     pricePerSqFt: "₹9,090/sq ft",
     builder: "By Aliens Group",
   },
+  {
+    id: 6,
+    title: "Modern Apartment in Gachibowli",
+    image: "/mbh2.jpeg",
+    badge: "NEW",
+    badgeColor: "bg-green-500",
+    area: "1,800 sq ft",
+    bedrooms: "3 BHK",
+    bathrooms: "3 Bath",
+    status: "Under Construction",
+    price: "₹1.2 Cr",
+    pricePerSqFt: "₹6,667/sq ft",
+    builder: "By My Home Group",
+  },
 ];
 
 export default function TrendingProjects() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-24 bg-white px-4">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-800 inline-block">
@@ -101,16 +115,16 @@ export default function TrendingProjects() {
         </p>
       </div>
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-8 py-8 text-center">
         {/* First Row - 2 Horizontal Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 mb-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 justify-items-center">
           {projects.slice(0, 2).map((project) => (
             <div
               key={project.id}
-              className="flex bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 w-full max-w-lg"
+              className="flex bg-white rounded-sm shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 w-full max-w-2xl"
             >
               {/* Left - Image */}
-              <div className="relative w-1/2 h-40">
+              <div className="relative w-1/2 h-56">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -118,15 +132,15 @@ export default function TrendingProjects() {
                   className="object-cover"
                 />
                 <div
-                  className={`absolute top-3 left-3 ${project.badgeColor} text-white text-xs font-bold px-2 py-1 rounded-full`}
+                  className={`absolute top-2 left-2 ${project.badgeColor} text-white text-xs font-bold px-1.5 py-0.5 rounded-full`}
                 >
                   {project.badge}
                 </div>
               </div>
 
               {/* Right - Content */}
-              <div className="w-1/2 p-4 flex flex-col justify-between">
-                <h3 className="text-base font-bold text-gray-900 line-clamp-2">
+              <div className="w-1/2 p-3 flex flex-col justify-between">
+                <h3 className="text-sm font-bold text-gray-900 line-clamp-2">
                   {project.title}
                 </h3>
                 <p className="text-xs text-gray-600">
@@ -145,15 +159,15 @@ export default function TrendingProjects() {
           ))}
         </div>
 
-        {/* Second Row - 3 Vertical Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 justify-items-center">
-          {projects.slice(2, 5).map((project) => (
+        {/* Second Row - 4 Vertical Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+          {projects.slice(2, 6).map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 w-full max-w-xs"
+              className="bg-white rounded-sm shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 w-full max-w-xs"
             >
               {/* Image */}
-              <div className="relative h-36 w-full">
+              <div className="relative h-32 w-full">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -161,15 +175,15 @@ export default function TrendingProjects() {
                   className="object-cover"
                 />
                 <div
-                  className={`absolute top-3 left-3 ${project.badgeColor} text-white text-xs font-bold px-2 py-1 rounded-full`}
+                  className={`absolute top-2 left-2 ${project.badgeColor} text-white text-xs font-bold px-1.5 py-0.5 rounded-full`}
                 >
                   {project.badge}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-4">
-                <h3 className="text-sm font-bold text-gray-900 line-clamp-2">
+              <div className="p-2">
+                <h3 className="text-xs font-bold text-gray-900 line-clamp-2">
                   {project.title}
                 </h3>
                 <p className="text-xs text-gray-600">

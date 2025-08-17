@@ -13,10 +13,10 @@ import Image from 'next/image';
 
 export default function Home() {
   const images = [
-    '/mhb1.jpeg',
-    '/mbh2.jpeg',
-    '/mbh3.jpeg',
-    '/mbh4.avif',
+    '/mainimage.jpg',
+    '/mainimage.jpg',
+    '/mainimage.jpg',
+    '/mainimage.jpg',
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -151,21 +151,21 @@ export default function Home() {
               <p className="text-xl text-gray-600">Sponsored & Featured projects</p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 justify-center">
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
               {/* Left Side: Property Listing Card */}
-              <div className="md:w-1/5 bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+              <div className="md:w-1/5 bg-white rounded-md shadow-md p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Cybercity Westbrook</h3>
-                  <p className="text-gray-600 text-sm mb-4">Since 2013 • 4 Projects</p>
-                  <div className="flex items-center text-gray-700 mb-2">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l-7 7m7-7v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Cybercity Westbrook</h3>
+                  <p className="text-gray-600 text-xs mb-4">Since 2013 • 4 Projects</p>
+                  <div className="flex items-center text-gray-700 text-sm mb-2">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l-7 7m7-7v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
                     <span>4 BHK • 3 Bath</span>
                   </div>
-                  <div className="flex items-center text-gray-700 mb-4">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 8h6m-5 0a3 3 0 110 6H9l3 3m-3-6h6m-2 8l-3 3H9a2 2 0 01-2-2v-3a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3z" /></svg>
+                  <div className="flex items-center text-gray-700 text-sm mb-4">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 8h6m-5 0a3 3 0 110 6H9l3 3m-3-6h6m-2 8l-3 3H9a2 2 0 01-2-2v-3a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3z" /></svg>
                     <span>2.5 Cr</span>
                   </div>
-                  <button className="w-full border border-teal-700 text-teal-700 font-semibold py-2 rounded-lg hover:bg-teal-700 hover:text-white transition-colors duration-200">
+                  <button className="w-full border border-teal-700 text-teal-700 font-semibold py-2 rounded-md hover:bg-teal-700 hover:text-white transition-colors duration-200">
                     View Property
                   </button>
                 </div>
@@ -173,14 +173,14 @@ export default function Home() {
                   <div className="bg-blue-700 text-white text-sm font-bold px-3 py-2 rounded-md mr-3">PG</div>
                   <div>
                     <p className="font-semibold text-gray-900">Cybercity builders & developers</p>
-                    <p className="text-gray-600 text-sm">Since 2013 • 4 Projects</p>
+                    <p className="text-gray-600 text-xs">Since 2013 • 4 Projects</p>
                   </div>
                 </div>
               </div>
 
               {/* Right Side: Image Carousel */}
               <div className="md:w-2/3 relative">
-                <div className="relative w-full h-96 rounded-lg overflow-hidden">
+                <div className="relative w-full h-96 rounded-md overflow-hidden">
                   <Image src={images[currentImageIndex]} alt={`Property Image ${currentImageIndex + 1}`} fill className="object-cover" />
                 </div>
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
